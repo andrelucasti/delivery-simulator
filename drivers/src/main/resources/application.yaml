@@ -1,0 +1,13 @@
+ktor:
+  application:
+    modules:
+      - io.andrelucas.ApplicationKt.module
+  deployment:
+    port: "$PORT:8181"
+
+  db:
+    url: "$DB_URL:jdbc:postgresql://localhost:5432/drivers"
+    user: "$DB_USER:drivers"
+    password: "$DB_PASSWORD:drivers"
+    driverClassName: "$DB_DRIVER:org.postgresql.Driver"
+    migrations: "$DB_LOCATION:classpath:db/migrations"
