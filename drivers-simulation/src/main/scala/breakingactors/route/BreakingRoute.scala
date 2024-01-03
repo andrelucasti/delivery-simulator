@@ -3,8 +3,10 @@ package breakingactors.route
 
 import akka.actor.typed.{ActorSystem, Behavior}
 import akka.actor.typed.scaladsl.Behaviors
-import scala.collection.mutable.{Map => MutableMap}
+import io.andrelucas.business.driver.DriverDTO
+import io.andrelucas.business.geolocation.Geolocation
 
+import scala.collection.mutable.Map as MutableMap
 import java.util.UUID
 
 // NEVER PASS MUTABLE STATES TO OTHER ACTORS
@@ -18,7 +20,7 @@ object BreakingRoute {
   case class CheckRouteStatus() extends RouteCommand
 
   trait DriverCommand
-  case class CreateDriver(driveDTO: DriveDTO) extends DriverCommand
+  case class CreateDriver(driveDTO: DriverDTO) extends DriverCommand
   case class AttachToRoute(driverId: UUID, routeId: UUID, routes: MutableMap[UUID, Route]) extends DriverCommand
   case class InRoute(routeId: UUID, driverId: UUID) extends DriverCommand
 

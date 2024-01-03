@@ -2,6 +2,7 @@ package io.andrelucas
 package breakingactors.route
 
 import io.andrelucas.breakingactors.route.RouteStatus.ALLOCATED
+import io.andrelucas.business.geolocation.Geolocation
 
 import java.util.UUID
 

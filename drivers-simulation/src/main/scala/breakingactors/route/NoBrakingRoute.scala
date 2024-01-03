@@ -3,6 +3,7 @@ package io.andrelucas
 import akka.actor.typed.{ActorRef, ActorSystem, Behavior}
 import akka.actor.typed.scaladsl.Behaviors
 import io.andrelucas.breakingactors.route.{Driver, Route}
+import io.andrelucas.business.geolocation.Geolocation
 
 import java.util.UUID
 

@@ -1,6 +1,6 @@
 package io.andrelucas
 
-import io.andrelucas.driver.Driver
+import io.andrelucas.business.driver.Driver
 import org.scalatest.flatspec.AnyFlatSpec
 
 class DriverTest extends AnyFlatSpec {
