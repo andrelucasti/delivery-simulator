@@ -14,9 +14,9 @@ class CreateDriverTest extends AnyFlatSpec {
 
     assert(repository.findAll().nonEmpty)
 
-    val driversName = repository.findAll().map(d=> d.getName)
-    val driversModal = repository.findAll().map(d => d.getModal)
-    val driversDeliveryRegion = repository.findAll().map(d => d.getDeliveryRegion)
+    val driversName = repository.findAll().map(d=> d.name)
+    val driversModal = repository.findAll().map(d => d.modal)
+    val driversDeliveryRegion = repository.findAll().map(d => d.deliveryRegion)
 
     assert(driversName.contains("Andre"))
     assert(driversModal.contains("Moto"))
