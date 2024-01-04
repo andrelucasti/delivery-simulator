@@ -7,12 +7,12 @@ import io.andrelucas.business.driver.{Driver, DriverDTO}
 
 object SimpleDriverActor {
 
-  trait DriverCommand
-  case class Create(driverDTO: DriverDTO, replyTo: ActorRef[Driver]) extends DriverCommand
+  trait SimpleDriverCommand
+  case class Create(driverDTO: DriverDTO, replyTo: ActorRef[Driver]) extends SimpleDriverCommand
 
-  def apply(): Behavior[DriverCommand] = createDriverBehavior()
+  def apply(): Behavior[SimpleDriverCommand] = createDriverBehavior()
 
-  private def createDriverBehavior(): Behavior[DriverCommand] = Behaviors.receive{ (context, message) =>
+  private def createDriverBehavior(): Behavior[SimpleDriverCommand] = Behaviors.receive{ (context, message) =>
     context.log.info(s"Creating Driver By Test $message")
 
     message match
